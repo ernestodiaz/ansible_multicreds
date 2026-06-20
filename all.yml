@@ -1,0 +1,23 @@
+---
+# group_vars/all.yml
+#
+# Global defaults applied to every host in the play. Per-host overrides
+# (e.g. login_protocols set on a single inventory host) take precedence
+# over these.
+#
+# NOTE: files/secrets.yml and files/credentials.yml are loaded directly
+# by site.yml via vars_files (relative to the playbook directory), so
+# they are not referenced here.
+
+# Order matters: tried top-to-bottom, first success wins.
+login_protocols:
+  - ssh
+  - telnet
+
+# Command to run once logged in. Set to something read-only and safe
+# by default. Override with -e remote_command="..." at runtime, or
+# set to null/'' to skip running any command and just test login.
+remote_command: "show version"
+
+# Per-attempt connection timeout, seconds.
+login_timeout: 15
