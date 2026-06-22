@@ -11,8 +11,8 @@
 
 # Order matters: tried top-to-bottom, first success wins.
 login_protocols:
-  - ssh
   - telnet
+  - ssh
 
 # Command to run once logged in. Set to something read-only and safe
 # by default. Override with -e remote_command="..." at runtime, or
