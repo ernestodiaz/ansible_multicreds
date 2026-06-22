@@ -1,0 +1,9 @@
+name,ip address,device type
+# CSV template for inventory/hosts.yml generation.
+# Lines starting with '#' are ignored by scripts/csv_to_hosts.py.
+# Delete the example rows below and add your own devices.
+# device type values: ios, ios-xe, nxos, asa, ios-xr (or full cisco_xxx)
+core-sw01,10.10.1.1,ios
+core-sw02,10.10.1.2,ios
+dist-rtr01,10.10.2.1,ios-xe
+nx-sw01,10.10.9.5,nxos
